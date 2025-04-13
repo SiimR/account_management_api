@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: changelog/tables/001_accounts_table.yaml

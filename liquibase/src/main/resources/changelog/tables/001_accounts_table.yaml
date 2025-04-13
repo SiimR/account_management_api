@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-accounts-table
+      author: siim
+      changes:
+        - createTable:
+            tableName: accounts
+            remarks: User accounts
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  remarks: Primary key (technical field, added by the system)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(50)
+                  remarks: Account name
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_number
+                  type: varchar(50)
+                  remarks: Phone number associated with the account
+              - column:
+                  name: created_at
+                  type: timestamptz
+                  remarks: Creation timestamp (technical field, added by the system)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: modified_at
+                  type: timestamptz
+                  remarks: Modification timestamp (technical field, added by the system)
+                  constraints:
+                    nullable: false

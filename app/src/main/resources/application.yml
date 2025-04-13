@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:account_management;DB_CLOSE_DELAY=-1;INIT=RUNSCRIPT FROM 'classpath:init/init.sql'
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: accounts
+  liquibase:
+    enabled: true
+    change-log: classpath:changelog/changelog.yaml
+    default-schema: accounts
+  h2:
+    console:
+      enabled: true
