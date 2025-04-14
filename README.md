@@ -16,7 +16,7 @@ The API will be available at `http://localhost:8080`.
 - `GET /accounts/{id}` - Get account details
 
 ### H2 Database Console
-Database console is available at `/h2-console`a
+Database console is available at `/h2-console`
 
 ### Documentation
 API documentation is available at `/swagger-ui.html`
